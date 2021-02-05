@@ -1,13 +1,10 @@
 /* Переменная содержит в себе строку. Вывести строку в обратном порядке.
-let someText = "Hi, my name is Andrey.";
-let textLenght = 0;
-let rez = [];
 
-for(let i = 0; i < someText.length; i++) {
-    textLenght = i;
-};
-for(let j = textLenght; j >= 0; j--){
-    rez += someText[j];
+let someText = "Hi, my name is Andrey.";
+let rez = "";
+
+for(let i = someText.length-1; i >= 0; i--){
+    rez += someText[i];
 }
 
 console.log(rez);
@@ -26,9 +23,9 @@ console.log(rez);
 /* Дано число - вывести первые N делителей этого числа нацело. 
 
 let number = 200;
-let j = 0;
+let j = 0, r = 2;
 for(let i = 0; i < number; i++){  
-    if(number % i === 0 && j < 2) {
+    if(number % i === 0 && j < r) {
         console.log(i);
         j++;
     }
@@ -51,15 +48,17 @@ console.log(rez);
 */
 
 /*Найти минимальное число которое больше 300 и нацело делиться на 17 
+
+let minNum = 300, delNum = 17;
 let number = 0;
-for(let i = 300; i % 17; i++) {
+for(let i = minNum; i % delNum; i++) {
     number = i + 1;
 }
 console.log(number);
 */
 
 /* Заданы две переменные для двух целых чисел, найти максимальное общее значение которое нацело делит два заданных числа. 
-*/
+
 let a=15;
 let b=20;
 let rez = 0;
@@ -72,3 +71,4 @@ for(let i = a; i <= a && i <= b ; i--) {
 }
 console.log(rez);
 
+*/
