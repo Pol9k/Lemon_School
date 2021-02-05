@@ -26,8 +26,9 @@ console.log(creditMoneyAll(2000));
 
 /* Переменная хранит в себе единицу измерения одно из возможных значений (Byte, KB, MB, GB), Вторая переменная хранит в себе целое число. В зависимости от того какая единица измерения написать скрипт, который выводит количество байт. Для вычисления принимает счет что в каждой последующей единицы измерения хранится 1024 единиц более меньшего измерения.
 
-function answerByti(unity){
-    let rez = 0, num = 1;
+
+function answerByti(unity, num){
+    let rez = 0;
     if(unity === 'KB') {
         rez = 1024 * num;
    } else if(unity === 'MB') {
@@ -35,12 +36,12 @@ function answerByti(unity){
    } else if(unity === 'GB') {
         rez = 1073741824 * num;
    } else {
-       rez = 1;
+       rez = 1 * num;
    }
-   return rez + ' количество байт в ' + num + unity;
+   return rez + ' количество байт в ' + num +' '+ unity;
 };
-console.log(answerByti('GB'))
-
+console.log(answerByti('GB',20))
+*/
 
 
 /*
@@ -120,8 +121,8 @@ console.log(textBackLetters("Hi. My name is Andriy!"));
  console.log(factorialNumber(4));
  */
 /* Дано число - вывести первые N делителей этого числа нацело. 
-
-function ferstDivisor(num){
+*/
+function ferstDivisor(num, someNum){
     let j = 0;
     for(let i = 2; i < num; i++){  
         if(num % i === 0 && j < 2) {
@@ -131,7 +132,7 @@ function ferstDivisor(num){
     }
 };
 ferstDivisor(15);
-*/
+
 
 /* Найти сумму цифр числа которые кратны двум
 
