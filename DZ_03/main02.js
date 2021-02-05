@@ -1,3 +1,5 @@
+// !!! ПЕРЕВЕСТИ Все скрипты которые используют в своей основе цикл - написать с помощью рекурсивных функций
+
 /*
 Переменная содержит в себе число. Написать скрипт который посчитает факториал этого числа.
 
@@ -39,18 +41,6 @@ function minNumRecursion(n){
 minNumRecursion(1);
 */
 /* Заданы две переменные для двух целых чисел, найти максимальное общее значение которое нацело делит два заданных числа. 
-
-function maxNumber(num1, num2){
-    let rez = 0;
-    for(let i = num1; i <= num1 && i <= num2 ; i--) {
-        if(num1 % i === 0 && num2 % i === 0) {
-            rez = i;
-            break;
-        }
-    }
-    return rez;
-};
-console.log(maxNumber(54,7554));
 */
 let num1 = 5;
 let num2 = 51515;
@@ -61,4 +51,4 @@ function maxNumRecursion(rez){
     }
     maxNumRecursion(++rez);
 }
-maxNumRecursion(2)
+maxNumRecursion(2);
