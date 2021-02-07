@@ -47,22 +47,26 @@ console.log(ansByti('GB',20))
 /*
 Переменная хранит в себе значение, напишите скрипт которое выводит информацию о том, что число является нулевым либо положительным либо отрицательным.
 */
-let arr = [4,7,8,-2,0];
 let numVal = function someVal(number){
     if(number === 0){
-        return number;
+        return "zero";
     } else if(number > 0){
-        return number;
+        return "positive";
     } else if(number < 0){
-        return number;
+        return "negative";
     }
     else {
-        return number + ' :( введите число!!!';
+        return number + 'введите число!!!';
     };
 };
-function sortNum(num){};
 console.log(numVal(-5));
 
+let arr = [4,7,8,-2,0];
+let sortArr = [];
+for(i=0;i<arr.length;i++){
+    sortArr += numVal(arr[i]) + " ";
+}
+console.log(sortArr);
 
 /*  Переменная хранит в себе значение от 0 до 9. Написать скрипт который будет выводить слово “один”, если переменная хранит значение 1. Выводить слово “два” - если переменная хранит значение 2, и т.д. для всех цифр от 0 до 9. Реализовать двумя способами.
 
