@@ -8,25 +8,24 @@ let rez = 0;
 
 function creditPercYear(percentMonth) {
     rez = percentMonth * 12;
-    return rez +"% заплатит клиент за один календарный год";
+    return rez;
 };
 function creditPercAll(creditTime){
     rez = creditTime * rez;
-    return rez +"% заплатит клиент за все время";
+    return rez;
 };
 function creditMoneyAll(credBody){
     rez = credBody * rez;
-    return rez + "$ клиент банка выплатит за все время кредита";
+    return rez;
 };
 
-console.log(creditPercYear(2));
-console.log(creditPercAll(6));
-console.log(creditMoneyAll(2000));
+console.log(creditPercYear(2) + " %");
+console.log(creditPercAll(6) + " %");
+console.log(creditMoneyAll(2000) + " $");
  */
 
 /* Переменная хранит в себе единицу измерения одно из возможных значений (Byte, KB, MB, GB), Вторая переменная хранит в себе целое число. В зависимости от того какая единица измерения написать скрипт, который выводит количество байт. Для вычисления принимает счет что в каждой последующей единицы измерения хранится 1024 единиц более меньшего измерения.
 
-*/
 let ansByti = function answerByti(unity, num){
     let rez = 0;
     if(unity === 'KB') {
@@ -38,30 +37,32 @@ let ansByti = function answerByti(unity, num){
    } else {
        rez = 1 * num;
    }
-   return rez + ' количество байт в ' + num +' '+ unity;
+   return rez;
 };
 console.log(ansByti('GB',20))
 
+*/
 
 
 /*
 Переменная хранит в себе значение, напишите скрипт которое выводит информацию о том, что число является нулевым либо положительным либо отрицательным.
-
-
-function numberValue(number){
+*/
+let arr = [4,7,8,-2,0];
+let numVal = function someVal(number){
     if(number === 0){
-        return number +' число является нулевым!';
+        return number;
     } else if(number > 0){
-        return number +' число является положительным!';
+        return number;
     } else if(number < 0){
-        return number +' число является отрицательным!';
+        return number;
     }
     else {
         return number + ' :( введите число!!!';
     };
 };
-console.log(numberValue());
-*/
+function sortNum(num){};
+console.log(numVal(-5));
+
 
 /*  Переменная хранит в себе значение от 0 до 9. Написать скрипт который будет выводить слово “один”, если переменная хранит значение 1. Выводить слово “два” - если переменная хранит значение 2, и т.д. для всех цифр от 0 до 9. Реализовать двумя способами.
 
