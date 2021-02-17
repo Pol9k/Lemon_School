@@ -5,8 +5,7 @@
 let addMass = function(num1, num2, param){
     let mass = [];
     let numDiap = 0;
-    let aaa = param;
-
+    
     for(let i = 0; i < param; i++){
        ++numDiap;
        
@@ -17,11 +16,10 @@ let addMass = function(num1, num2, param){
         newMass.length = 0;
     };
     return newMass;
-
-    function someNum(val1, val2){
-        return Math.floor(Math.random() * (val1 - val2)) + val2;
-    };
 }
+function someNum(val1, val2){
+    return Math.floor(Math.random() * (val1 - val2)) + val2;
+};
     
 // console.log(addMass(-10, 20, 5));
 /* 
@@ -51,5 +49,54 @@ let getProcRel = function(arr){
 
     return procRel;
 }
-console.log(getProcRel(addMass(-10, 20, 5)));
+// console.log(getProcRel(addMass(-10, 20, 5)));
+
+/* 
+Все предыдущий задания на циклы - написать с помощью циклов for in и/или for of
+*/
+
+/* 
+Задано предложение - подсчитать количество вхождений каждого слова в предложении. Вывести список уникальных слов и напротив каждого слова - сколько раз встретилось
+*/
+
+let text1 = "Hi, my name is Andrej and I`m from Kharkiv city";
+
+let getNumberWord = function(text){
+    let mass = text.split(' ');
+    return mass.length;
+};
+console.log(getNumberWord(text1));
+
+/*
+Написать рекурсивную функцию которая выводит абсолютно все элементы ассоциативного массива (объекта) - любого уровня вложенности
+*/
+
+let getElement = function(arr){
+    let ell = 0;
+    if(arr[ell].length > 0) {
+        
+        ++ell
+    }
+
+    return ell;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
