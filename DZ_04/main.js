@@ -5,7 +5,6 @@
 let addMass = function(num1, num2, param){
     let mass = [];
     let numDiap = 0;
-    
     for(let i = 0; i < param; i++){
        ++numDiap;
        
@@ -22,6 +21,7 @@ function someNum(val1, val2){
 };
     
 // console.log(addMass(-10, 20, 5));
+
 /* 
 Использовать функцию из предыдущего задания чтобы получить массив из нужного количества значений. Найти процентное соотношение отрицательных, положительных и нулевых элементов массива. */
 
@@ -43,49 +43,12 @@ let getProcRel = function(arr){
     positiv = positiv/arr.length*100;
     negetive = negetive/arr.length*100;
     nullAl = nullAl/arr.length*100;
-    
 
     procRel.push(positiv, negetive, nullAl)
 
     return procRel;
 }
-// console.log(getProcRel(addMass(-10, 20, 5)));
-
-/* 
-Все предыдущий задания на циклы - написать с помощью циклов for in и/или for of
-*/
-
-/* 
-Задано предложение - подсчитать количество вхождений каждого слова в предложении. Вывести список уникальных слов и напротив каждого слова - сколько раз встретилось
-*/
-
-let text1 = "Hi, my name is Andrej and I`m from Kharkiv city";
-
-let getNumberWord = function(text){
-    let mass = text.split(' ');
-    return mass.length;
-};
-console.log(getNumberWord(text1));
-
-/*
-Написать рекурсивную функцию которая выводит абсолютно все элементы ассоциативного массива (объекта) - любого уровня вложенности
-*/
-
-let getElement = function(arr){
-    let ell = 0;
-    if(arr[ell].length > 0) {
-        
-        ++ell
-    }
-
-    return ell;
-}
-
-
-
-
-
-
+console.log(getProcRel(addMass(-10, 20, 5)));
 
 
 
