@@ -23,4 +23,33 @@ let addMass = function(num1, num2, param){
     };
 }
     
-console.log(addMass(1, 20, 5));
+// console.log(addMass(-10, 20, 5));
+/* 
+Использовать функцию из предыдущего задания чтобы получить массив из нужного количества значений. Найти процентное соотношение отрицательных, положительных и нулевых элементов массива. */
+
+let getProcRel = function(arr){
+    let procRel = [];
+    let positiv = 0;
+    let negetive = 0;
+    let nullAl = 0;
+
+    arr.forEach(el => {
+        if(el < 0){
+            ++negetive;
+        } else if(el > 0){
+            ++positiv;
+        } else {
+            ++nullAl;
+        }
+    });
+    positiv = positiv/arr.length*100;
+    negetive = negetive/arr.length*100;
+    nullAl = nullAl/arr.length*100;
+    
+
+    procRel.push(positiv, negetive, nullAl)
+
+    return procRel;
+}
+console.log(getProcRel(addMass(-10, 20, 5)));
+
