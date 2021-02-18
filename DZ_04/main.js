@@ -7,7 +7,6 @@ let addMass = function(num1, num2, param){
     let numDiap = 0;
     for(let i = 0; i < param; i++){
        ++numDiap;
-       
        mass.push(someNum(num1, num2));
     }
     let newMass = Array.from(new Set(mass));
@@ -51,9 +50,39 @@ let getProcRel = function(arr){
 console.log(getProcRel(addMass(-10, 20, 5)));
 
 
+/* 
+Задано предложение - подсчитать количество вхождений каждого слова в предложении. Вывести список уникальных слов и напротив каждого слова - сколько раз встретилось
+*/
+
+let text = "Задано предложение - подсчитать количество вхождений каждого слова в предложении. Вывести список уникальных слов и напротив каждого слова - сколько раз встретилось";
+
+let getNumberWord = function(text){
+    let mass = text.split(' ');
+    return mass;
+};
+
+let getRet = arr => arr.reduce((arr, el) => {
+    arr[el] = (arr[el] || 0) + 1;
+    return arr;
+  }, {});
+
+// console.log(getRet(getNumberWord(text)));
 
 
 
+/*
+Написать рекурсивную функцию которая выводит абсолютно все элементы ассоциативного массива (объекта) - любого уровня вложенности
+*/
+
+function searchAll(arr){
+    for(let key in arr){
+        if(typeof arr[key] === "object"){
+            searchAll(arr[key]);
+        } else {
+            console.log(arr[key])
+        }
+    }
+}
 
 
 
