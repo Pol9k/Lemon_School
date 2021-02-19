@@ -73,7 +73,7 @@ let getRet = arr => arr.reduce((arr, el) => {
 /*
 Написать рекурсивную функцию которая выводит абсолютно все элементы ассоциативного массива (объекта) - любого уровня вложенности
 */
-
+let someArr = [12,65,98,[43,434,[1,35],54]]
 function searchAll(arr){
     for(let key in arr){
         if(typeof arr[key] === "object"){
@@ -83,7 +83,70 @@ function searchAll(arr){
         }
     }
 }
+console.log(searchAll(someArr))
 
+/*
+Все предыдущий задания на циклы - написать с помощью циклов for in и/или for of
+*/
+function searchAll(arr){
+    for(let key in arr){
+        if(typeof arr[key] === "object"){
+            searchAll(arr[key]);
+        } else {
+            console.log(arr[key])
+        }
+    }
+}
+// !!!
+
+let numVal = function someVal(number){
+    if(number === 0){
+        return "zero";
+    } else if(number > 0){
+        return "positive";
+    } else if(number < 0){
+        return "negative";
+    }
+    else {
+        return number + 'введите число!!!';
+    };
+};
+let arr = [4,7,8,-2,0];
+let sortArr = [];
+
+for(let num in arr){
+    sortArr += numVal(arr[num]) + " ";
+}
+console.log(sortArr);
+
+// !!!
+function textBackLetters (text){
+    let textLenght = 0;
+    let rez = "";
+
+    for(let letter in text){
+        textLenght = letter;
+    }
+    for(let j = textLenght; j >= 0; j--){
+        rez += text[j];
+    }
+    return rez;
+}
+console.log(textBackLetters("Hi. My name is Andriy!"));
+
+// !!!
+
+let num = 5645479;
+let rez = 0;
+
+let sameText = String(num);
+for(let el in sameText){
+    let sameNumber = Number(sameText[el]);
+    if(sameNumber % 2 === 0) {
+        rez += sameNumber;
+    };
+}
+console.log(rez);
 
 
 
