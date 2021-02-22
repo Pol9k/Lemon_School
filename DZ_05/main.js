@@ -73,17 +73,5 @@ function getTrue(){
 
 console.log(averageRating(students));
 
-/*
-let averageRating = function(arr){
-    let obj = {};
-    for(let i = 0; i < arr.length; i++){
-        if(obj[arr[i].course] === undefined){
-            obj[arr[i].course] = 0;
-        }
-        obj[arr[i].course] += arr[i].estimate;
-    }
 
-    return obj;
-}
-*/
 
