@@ -2,12 +2,12 @@
 Написать функцию которая генерирует массив случайных значений, таким образом что все элементы результирующего массива являются уникальными. Генерациями происходит в рамках чисел от N до M, где N,M - могут быть как положительные так и отрицательными, и еще одним параметром количество значений которые нужно сгенерировать. Если количество генерируемых значений больше чем чисел в диапазоне - отдавать пустой массив.
 */
 
-let addMass = function(num1, num2, param){
+let addMass = function(numFerst, numSecond, param){
     let mass = [];
     let numDiap = 0;
     for(let i = 0; i < param; i++){
        ++numDiap;
-       mass.push(someNum(num1, num2));
+       mass.push(someNum(numFerst, numSecond));
     }
     let newMass = Array.from(new Set(mass));
     if(param > newMass.length){
@@ -15,8 +15,8 @@ let addMass = function(num1, num2, param){
     };
     return newMass;
 }
-function someNum(val1, val2){
-    return Math.floor(Math.random() * (val1 - val2)) + val2;
+function someNum(valFerst, valSecond){
+    return Math.floor(Math.random() * (valFerst - valSecond)) + valSecond;
 };
     
 // console.log(addMass(-10, 20, 5));
@@ -73,7 +73,7 @@ let getRet = arr => arr.reduce((arr, el) => {
 /*
 Написать рекурсивную функцию которая выводит абсолютно все элементы ассоциативного массива (объекта) - любого уровня вложенности
 */
-let someArr = [12,65,98,[43,434,[1,35],54]]
+let someArr = [12,65,98,[43,434,[1,35],54]];
 function searchAll(arr){
     for(let key in arr){
         if(typeof arr[key] === "object"){
