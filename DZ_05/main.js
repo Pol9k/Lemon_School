@@ -49,29 +49,30 @@ let students = [
     {name: "Akakij", estimate: 1, course: 2, active: true},
 ]
 
-let averageRating = function(arr){
-    let obj = {};
-    let some = [];
-    let num = 0;
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i].active){
-            if(obj[arr[i].course] === undefined){
-                obj[arr[i].course] = 0;
+function getTrue(arrStudents){
+    let objCurs = {};
+    for(let i = 0; i < arrStudents.length; i++){
+        if(arrStudents[i].active){
+            if(objCurs[arrStudents[i].course] === undefined){
+                objCurs[arrStudents[i].course] = {
+                    counter: 0,
+                    sumEstim: 0,
+                };
             }
-            obj[arr[i].course] += arr[i].estimate;
-            some.push(arr[i].course);
+            ++objCurs[arrStudents[i].course].counter 
+            objCurs[arrStudents[i].course].sumEstim += arrStudents[i].estimate;
         }
     }
-    console.log(some)    
-
-    return obj;
+    for(let curs in objCurs){
+        objCurs[curs].rezEstimate = objCurs[curs].sumEstim / objCurs[curs].counter
+    }
+    return objCurs;
 }
-function getTrue(){
-
-}
+console.log(getTrue(students));
 
 
-console.log(averageRating(students));
+
+
 
 
 
