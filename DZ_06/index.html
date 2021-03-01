@@ -31,7 +31,36 @@
         <li class="answerTextSecondTask"></li>
     </ul>
 
+    <p class="question">3. В задании из пятого урока, взять массив со студентами и вывести их на страницу согласно сверстанной HTML-структуре, рядом с каждым студентом вывести крестик - по нажатию на который студент будет удален (удаляется как со страницы, так и с объекта), если был удален последний студент написать текстовое сообщение (“Студенты не найдены”)</p>
+    <form class="form" action="" method="GET" onsubmit="return false;">
+        <input type="text" name="firstname" value="" placeholder="Name">
+        <input type="number" name="course" value="" placeholder="Course">
+        <input type="number" name="estimate" value="" placeholder="Estimate">
+        <input type="checkbox" id="is_active" name="is_active" value="">
+        <label for="is_active">Active</label>
+        <textarea name="message"></textarea>
+        <input type="submit" name="send" value="Send">
+    </form>
 
-    <script src="main.js"></script>
+        <section class="section">
+            <h1>University</h1>
+            <table class="table__students">
+                <thead class="table__heder">
+                    <tr>
+                        <th>Имя</th>
+                        <th>Курс</th>
+                        <th>Оценка</th>
+                        <th>Активность</th>
+                    </tr>
+                </thead>
+                <tbody class="table__body">
+
+                </tbody>
+            </table>
+        </section>
+
+
+    <script src="main.js" async></script>
+    <script src="/mainStudents.js" async></script>
 </body>
 </html>

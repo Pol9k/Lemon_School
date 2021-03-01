@@ -5,17 +5,68 @@
 }
 body {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     min-height: 100vh;
-
+    font-family: sans-serif;
+    min-height: 100vh;
+    padding: 0 3rem;
+    font-size: 62.5%;
 }
 body a,
 body ul li {
     margin: 1em 0;
 }
+.question {
+    color: green;
+    font-size: 0.7rem;
+}
 
 body ul li:first-child {
     list-style: none;
     color: green;
+}
+
+.form {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+.form input,
+.form label {
+    margin: auto 0.3rem;
+    min-height: 2rem;
+    font-family: sans-serif;
+}
+.form label {
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    min-height: 80vh;
+    width: 100%;
+    padding: 1rem;
+}
+.section h1 {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    border-bottom: .2rem solid crimson;
+    letter-spacing: 0.1rem;
+}
+
+.table__students tr th{
+
+}
+
+.table__heder {
+    font-size: 1.2rem;
+    color: #121212;
+}
+
+.table__body {
+
 }
